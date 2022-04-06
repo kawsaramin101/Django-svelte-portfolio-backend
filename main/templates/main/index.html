@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+        {% include 'django_quill/media.html' %}
+    <style>
+    /*
+        div {
+            background:#d16f44;
+        }*/
+    </style>
+</head>
+<body>
+    <div>
+
+        {% autoescape off %}
+        {{blog.content.html}}
+        {% endautoescape %}
+    </div>
+</body>
+</html>
